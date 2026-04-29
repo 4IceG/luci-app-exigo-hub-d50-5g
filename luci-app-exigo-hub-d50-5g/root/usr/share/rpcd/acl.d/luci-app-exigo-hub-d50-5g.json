@@ -1,0 +1,30 @@
+{
+  "luci-app-exigo-hub-d50-5g": {
+    "description": "Grant access to Xunison Exigo Hub D50 5G app",
+    "read": {
+      "file": {
+        "/sys/class/hwmon/*": [ "read" ],
+        "/sys/class/thermal/*": [ "read" ]
+      }
+    },
+    "write": {
+      "uci": [ "system", "modemdata", "defmodems", "atinout", "sms_tool_js", "easyconfig_transfer", "watchdog", "qfirehose" ],
+      "file": {
+        "/sys/class/leds/*/brightness": [ "write" ],
+        "/sys/class/leds/*/trigger": [ "write" ],
+        "/sys/class/leds/*/delay_on": [ "write" ],
+        "/sys/class/leds/*/delay_off": [ "write" ],
+	"/var/run/modem_led_4G5G.pid": [ "write" ]
+      }
+    },
+    "exec": {
+      "/usr/share/xunison/led_4G5G.sh": [ "*" ],
+      "/usr/share/xunison/sensors.sh": [ "*" ],
+      "/etc/init.d/led": [ "restart", "reload", "start", "stop", "enable", "disable" ],
+      "/etc/init.d/modem_led": [ "restart", "reload", "start", "stop", "enable", "disable", "status" ],
+      "/usr/bin/sms_tool": [ "*" ],
+      "/bin/rm": [ "*" ],
+      "/sbin/ifstatus": [ "*" ]
+    }
+  }
+}

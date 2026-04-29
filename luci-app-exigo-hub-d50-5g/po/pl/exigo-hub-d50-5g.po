@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: pl\n"
+
+msgid "Sensors"
+msgstr "Sensory"
+
+msgid "CPU"
+msgstr "Procesor"
+
+msgid "Mainboard"
+msgstr "Płyta główna"
+
+msgid "Ethernet"
+msgstr "Ethernet"
+
+msgid "Network Coprocessor"
+msgstr "Procesor sieciowy"
+
+msgid "Wi-Fi 2.4GHz"
+msgstr "Wi-Fi 2.4GHz"
+
+msgid "Wi-Fi 5GHz"
+msgstr "Wi-Fi 5GHz"
+
+msgid "Quectel Cellular"
+msgstr "Komórkowy Quectel"
