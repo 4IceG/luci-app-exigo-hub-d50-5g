@@ -1,6 +1,8 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: luci-app-exigo-hub-d50-5g\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Rafał Wabik (IceG)\n"
 "Language: pl\n"
 
 msgid "Sensors"

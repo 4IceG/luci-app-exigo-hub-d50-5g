@@ -32,6 +32,8 @@ uci set network.modem.auto='0'
 uci commit network
 
 uci add_list firewall.@zone[1].network='modem'
+uci set firewall.@defaults[0].flow_offloading='1'
+uci set firewall.@defaults[0].flow_offloading_hw='1'
 uci commit firewall
 
 A_FILE="/etc/config/atinout"
@@ -41,7 +43,11 @@ if [ -f "$A_FILE" ]; then
 fi
 
 if [ -d /etc/modem/atinoutatcommands ]; then
-    cp /etc/modem/atinoutatcommands/quectel.user.default /etc/modem/atinoutatcommands/quectel.user
+	mv /etc/modem/atinoutatcommands/quectel.user.default /etc/modem/atinoutatcommands/quectel.user >/dev/null 2>&1 &
+	sleep 5
+	chmod 664 /etc/modem/atinoutatcommands/quectel.user >/dev/null 2>&1 &
+else
+	rm /etc/modem/atinoutatcommands/quectel.user.default >/dev/null 2>&1 &
 fi
 
 S_FILE="/etc/config/sms_tool_js"
@@ -49,6 +55,7 @@ if [ -f "$S_FILE" ]; then
 	uci set sms_tool_js.@sms_tool_js[0].readport='/dev/ttyUSB2'
 	uci set sms_tool_js.@sms_tool_js[0].sendport='/dev/ttyUSB2'
 	uci set sms_tool_js.@sms_tool_js[0].ussdport='/dev/ttyUSB2'
+	uci set sms_tool_js.@sms_tool_js[0].callport='/dev/ttyUSB2'
 	uci set sms_tool_js.@sms_tool_js[0].coding='auto'
 	uci set sms_tool_js.@sms_tool_js[0].ussd='1'
 	uci set sms_tool_js.@sms_tool_js[0].pdu='1'
@@ -59,7 +66,11 @@ if [ -f "$S_FILE" ]; then
 fi
 
 if [ -d /etc/modem/atcmmds ]; then
-    cp /etc/modem/atcmmds/quectel.user.default /etc/modem/atcmmds/quectel.user
+	mv /etc/modem/atcmmds/quectel.user.default /etc/modem/atcmmds/quectel.user >/dev/null 2>&1 &
+	sleep 5
+	chmod 664 /etc/modem/atcmmds/quectel.user >/dev/null 2>&1 &
+else
+	rm /etc/modem/atcmmds/quectel.user.default >/dev/null 2>&1 &
 fi
 
 D_FILE="/etc/config/defmodems"
@@ -72,6 +83,13 @@ if [ -f "$D_FILE" ]; then
 	uci set defmodems.defmodems.network='modem'
 	uci set defmodems.defmodems.user_desc='primary'
 	uci commit defmodems
+fi
+
+MB_FILE="/etc/config/modemband"
+if [ -f "$MB_FILE" ]; then
+	uci set modemband.@modemband[0].iface='modem'
+	uci set modemband.@modemband[0].set_port='/dev/ttyUSB2'
+	uci commit modemband
 fi
 
 W_FILE="/etc/config/watchdog"
@@ -104,7 +122,9 @@ USER_DEFINED_PORTS="/etc/user_defined_ports.json"
 sleep 15
 
 if [ -f "$PORTS_BAK" ]; then
-    cp /etc/modem/user_defined_ports.json.default /etc/user_defined_ports.json
+	cp /etc/modem/user_defined_ports.json.default /etc/user_defined_ports.json >/dev/null 2>&1 &
+else
+	rm /etc/modem/user_defined_ports.json.default >/dev/null 2>&1 &
 fi
 
 sleep 5

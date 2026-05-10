@@ -20,10 +20,13 @@
     "exec": {
       "/usr/share/xunison/led_4G5G.sh": [ "*" ],
       "/usr/share/xunison/sensors.sh": [ "*" ],
-      "/etc/init.d/led": [ "restart", "reload", "start", "stop", "enable", "disable" ],
-      "/etc/init.d/modem_led": [ "restart", "reload", "start", "stop", "enable", "disable", "status" ],
+      "/etc/init.d/led": [ "*" ],
+      "/etc/init.d/modem_led": [ "*" ],
       "/usr/bin/sms_tool": [ "*" ],
       "/bin/rm": [ "*" ],
+      "/bin/cp": [ "*" ],
+      "/bin/mv": [ "*" ],
+      "/bin/chmod": [ "*" ],
       "/sbin/ifstatus": [ "*" ]
     }
   }
