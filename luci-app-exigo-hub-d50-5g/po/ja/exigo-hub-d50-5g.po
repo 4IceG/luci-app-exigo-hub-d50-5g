@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Language: ja\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Sensors"
+msgstr "センサー"
+
+msgid "CPU"
+msgstr "CPU"
+
+msgid "Mainboard"
+msgstr "マザーボード"
+
+msgid "Ethernet"
+msgstr "イーサネット"
+
+msgid "Network Coprocessor"
+msgstr "ネットワークコプロセッサ"
+
+msgid "Wi-Fi 2.4GHz"
+msgstr "Wi-Fi 2.4GHz"
+
+msgid "Wi-Fi 5GHz"
+msgstr "Wi-Fi 5GHz"
+
+msgid "Quectel Cellular"
+msgstr "Quectelセルラー"

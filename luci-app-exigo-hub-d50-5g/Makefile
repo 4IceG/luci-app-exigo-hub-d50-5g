@@ -10,11 +10,11 @@ PKG_NAME:=luci-app-exigo-hub-d50-5g
 PKG_MAINTAINER:=Rafał Wabik <4Rafal@gmail.com>
 LUCI_TITLE:=LuCI JS support for Xunison Exigo Hub D50 5G
 LUCI_DESCRIPTION:=A dedicated LuCI JS package for the Xunison Exigo Hub D50 5G.
-LUCI_DEPENDS:=+sms-tool
+LUCI_DEPENDS:=+sms-tool +ip-full +kmod-tun
 LUCI_PKGARCH:=all
 PKG_LICENSE:=GNU
-PKG_VERSION:=1.6
-PKG_RELEASE:=20260510
+PKG_VERSION:=1.8
+PKG_RELEASE:=20260531
 
 include $(TOPDIR)/feeds/luci/luci.mk
 

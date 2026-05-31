@@ -10,10 +10,10 @@ get_device_info() {
     
     case "$device_name" in
         *ath11k*isa*|*ath11k*c000000*)
-            echo "Wi-Fi 5GHz"
+            echo "Wi-Fi 2.4GHz"
             ;;
         *ath11k*pci*)
-            echo "Wi-Fi 2.4GHz"
+            echo "Wi-Fi 5GHz"
             ;;
         cpu_thermal|cpu-thermal)
             echo "CPU"
@@ -70,9 +70,9 @@ for hwmon_dir in /sys/class/hwmon/hwmon*; do
                     
                     description=""
                     if echo "$real_path" | grep -q "pci"; then
-                        description="Wi-Fi 2.4GHz"
-                    elif echo "$real_path" | grep -q "c000000\|platform"; then
                         description="Wi-Fi 5GHz"
+                    elif echo "$real_path" | grep -q "c000000\|platform"; then
+                        description="Wi-Fi 2.4GHz"
                     else
                         description="Wi-Fi"
                     fi

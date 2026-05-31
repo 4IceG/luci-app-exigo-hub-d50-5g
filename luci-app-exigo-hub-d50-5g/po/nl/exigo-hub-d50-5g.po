@@ -1,0 +1,31 @@
+msgid ""
+msgstr ""
+"Language-Team: Rafał Wabik (IceG)\n"
+"Language: nl\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Sensors"
+msgstr "Sensoren"
+
+msgid "CPU"
+msgstr "Processor"
+
+msgid "Mainboard"
+msgstr "Moederbord"
+
+msgid "Ethernet"
+msgstr "Ethernet"
+
+msgid "Network Coprocessor"
+msgstr "Netwerkcoprocessor"
+
+msgid "Wi-Fi 2.4GHz"
+msgstr "Wi-Fi 2,4 GHz"
+
+msgid "Wi-Fi 5GHz"
+msgstr "Wi-Fi 5 GHz"
+
+msgid "Quectel Cellular"
+msgstr "Quectel mobiel netwerk"

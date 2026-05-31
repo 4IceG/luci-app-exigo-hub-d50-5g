@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Language: ko\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Sensors"
+msgstr "센서"
+
+msgid "CPU"
+msgstr "CPU"
+
+msgid "Mainboard"
+msgstr "메인보드"
+
+msgid "Ethernet"
+msgstr "이더넷"
+
+msgid "Network Coprocessor"
+msgstr "네트워크 코프로세서"
+
+msgid "Wi-Fi 2.4GHz"
+msgstr "Wi-Fi 2.4GHz"
+
+msgid "Wi-Fi 5GHz"
+msgstr "Wi-Fi 5GHz"
+
+msgid "Quectel Cellular"
+msgstr "Quectel 셀룰러"
